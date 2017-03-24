@@ -17,7 +17,7 @@ public class Carte {
 	public String toString()
 	{
 		String s;
-		s = new String("Valeur de la carte : " +this.valeur + " La couleur : " +this.couleur);
+		s = new String(this.valeur+" "+this.couleur);
 		return s;
 	}
 	

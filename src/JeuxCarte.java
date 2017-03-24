@@ -4,25 +4,28 @@ public class JeuxCarte {
 	private int nbCarte;
     private Carte[] JeuxCarte;
 
+    /**
+	* Construit une instance de JeuxCarte.
+	*/
     public JeuxCarte(int nbCarte) {
         this.nbCarte = nbCarte;
         this.JeuxCarte = new Carte[nbCarte];
         
-        for (int i=1; i<(nbCarte/4)+1; i++) {
-            Carte c = new Carte(i, "pique");
+        for (int i=0; i<(nbCarte/4); i++) {
+            Carte c = new Carte(i+1, "pique");
             JeuxCarte[i] = c;
         }
-        for (int i=1; i<(nbCarte/4)+1; i++) {
-            Carte c = new Carte(i, "carreau");
-            JeuxCarte[i+13] = c;
+        for (int i=0; i<(nbCarte/4)+1; i++) {
+            Carte c = new Carte(i+1, "carreau");
+            JeuxCarte[i+(nbCarte/4)] = c;
         }
-        for (int i=1; i<(nbCarte/4)+1; i++) {
-            Carte c = new Carte(i, "trefle");
-            JeuxCarte[i+26] = c;
+        for (int i=0; i<(nbCarte/4)+1; i++) {
+            Carte c = new Carte(i+1, "trefle");
+            JeuxCarte[i+(nbCarte/4)*2] = c;
         }
-        for (int i=1; i<(nbCarte/4)+1; i++) {
-            Carte c = new Carte(i, "coeur");
-            JeuxCarte[i+39] = c;
+        for (int i=0; i<(nbCarte/4)+1; i++) {
+            Carte c = new Carte(i+1, "coeur");
+            JeuxCarte[i+(nbCarte/4)*3] = c;
         }
 
         System.out.println(JeuxCarte);
